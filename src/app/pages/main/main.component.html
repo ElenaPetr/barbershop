@@ -1,1 +1,24 @@
-<p>main works!</p>
+<div class="mat-typography img-container">
+    <img src="assets/images/16.jpg">
+    <div class="caption">
+        <h1 data-animation="fadeInUp" data-delay="100ms">We Care About <br> Your Hair</h1>
+        <p data-animation="fadeInUp" data-delay="400ms">“Discover your own style. Don't try to repeat what has already
+            been written - have the courage to do your own thing and don't be afraid to do something different.”</p>
+        <button mat-stroked-button routerLink="/about-us">about us</button>
+    </div>
+</div>
+<div class="text-centered">
+    <h2>Our Services</h2>
+    <p>The House of Hair Salon &amp; Spa, incididunt ut labore et dolore magna aliqua.</p>
+
+    <div fxLayout="row" fxLayoutAlign="space-between">
+        <div *ngFor="let s of services">
+            <mat-card class="services-info">
+                <img src="assets/images/{{s.img}}">
+                <h4>{{s.name}}</h4>
+                <mat-divider></mat-divider>
+                <p>{{s.description}}</p>
+            </mat-card>
+        </div>
+    </div>
+</div>

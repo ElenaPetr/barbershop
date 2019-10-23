@@ -1,0 +1,25 @@
+.img-container {
+  position: relative;
+  img {
+    width: 100%;
+  }
+}
+.caption {
+  width: 600px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  h1 {
+    font-size: 72px;
+    line-height: 1.2;
+    margin-bottom: 50px;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+.services-info {
+    width: 200px;
+    display: inline-block;
+    margin: 10px;
+}
