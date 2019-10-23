@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxLayoutAlign="space-between center">
+            <h1>Super Barbershop</h1>
+      <mat-nav-list role="navigation">
+        <a mat-list-item [routerLink]="['/main']" routerLinkActive="active">Main</a>
+        <a mat-list-item [routerLink]="['/about-us']" routerLinkActive="active">About us</a>
+        <a mat-list-item [routerLink]="['/services']" routerLinkActive="active">Services</a>
+        <a mat-list-item [routerLink]="['/products']" routerLinkActive="active">Products</a>
+      </mat-nav-list>
+      <button mat-icon-button (click)="openBasket()">
+            <mat-icon [matBadge]="basket?.totalItems" [matBadgeHidden]="basket?.totalItems == 0" matBadgeSize="medium"
+              matBadgePosition="above after" matBadgeColor="accent">shopping_cart</mat-icon>
+          </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
