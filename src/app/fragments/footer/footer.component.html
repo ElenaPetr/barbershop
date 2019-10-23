@@ -1,1 +1,44 @@
-<p>footer works!</p>
+<footer>
+        <mat-toolbar color="primary">
+          <mat-toolbar-row fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="space-between"
+            class="footer-toolbar theme-container">
+            <div fxFlex.lt-md="100" fxFlex="50" ngClass.xs="p-sm" ngClass.sm="p-sm">
+              <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between">
+                <div fxFlex.xs="100" fxFlex.gt-xs="50">
+                  <div fxLayout="column">
+                    <h2 class="upper-case">usefull links</h2>
+                    <p class="mb-0"><a class="link" routerLink="/about-us">about us</a></p>
+                    <p class="mb-0"><a class="link" routerLink="/products">products</a></p>
+                    <p class="mb-0"><a class="link" routerLink="/services">services</a></p>
+                  </div>
+                </div>
+                <div fxFlex.xs="100" fxFlex.gt-xs="50">
+                  <div fxLayout="column">
+                    <h2 class="upper-case" ngClass.xs="pt-25">contacts</h2>
+                    <p class="mb-0">
+                      <mat-icon>location_on</mat-icon>Iris Watson, P.O. Box 283 8562 Fusce Rd, NY
+                    </p>
+                    <p class="mb-0"><a href="tel:+380999999999" class="link">
+                        <mat-icon>local_phone</mat-icon>+38(099)999-99-99
+                      </a></p>
+                    <p class="mb-0"><a href='mailto:contact@superbarbershop.com' class="link">
+                        <mat-icon>mail_outline</mat-icon>contact@superbarbershop.com
+                      </a></p>
+                    <p class="mb-0">
+                      <mat-icon>schedule</mat-icon> Monday: Saturday: 10.00 - 19.00
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div fxFlex.lt-md="100" fxFlex="50" style="text-align: end">
+                <img src="https://staticmapmaker.com/img/google@2x.png" style="width:500px">
+              <!-- <app-google-map></app-google-map> -->
+            </div>
+          </mat-toolbar-row>
+          <mat-toolbar-row fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center center"
+            class="footer-toolbar theme-container">
+            <span style="font-size:12px; font-weight:100">@copyRight</span>
+          </mat-toolbar-row>
+        </mat-toolbar>
+      </footer>
