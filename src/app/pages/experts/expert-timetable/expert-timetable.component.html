@@ -1,0 +1,4 @@
+<div *ngIf="(timeTable$ | async) as timeTable">
+    <p *ngFor="let t of timeTable">{{t.timetable}}</p>
+</div>
+

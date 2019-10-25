@@ -1,0 +1,8 @@
+@import "src/styles.scss";
+
+h1, h2 {
+    text-align: center;
+}
+p > span {
+  color: mat-color($default-app-accent);
+}

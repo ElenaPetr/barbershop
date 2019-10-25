@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Service } from 'src/app/models/service';
+import { ServicesService } from 'src/app/shared/http-services/services.service';
+import { Store, select } from '@ngrx/store';
+import { IRootState } from 'src/app/reducers';
+import { LoadServices } from '../services/state/services.actions';
 
 @Component({
   selector: 'app-main',
@@ -7,32 +13,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  services = [
-    {
-      name: 'Coloring',
-      description: 'Ut enim ad minim veniam, quis trud exercitation...',
-      img: 's1.png'
-    },
-    {
-      name: 'Hairstyle',
-      description: 'Nemo enim ipsam voluptatem quia voluptas',
-      img: 's3.png'
-    },
-    {
-      name: 'Haircut',
-      description: 'Consectetur adipisicing elit, sed doe eiusmod',
-      img: 's4.png'
-    },
-    {
-      name: 'Coloring',
-      description: 'Ut enim ad minim veniam, quis trud exercitation...',
-      img: 's1.png'
-    },
-  ];
+  services$: Observable<Service[]>;
 
-  constructor() { }
+  constructor(private store: Store<IRootState>, private servicesService: ServicesService) { }
 
   ngOnInit() {
+    this.services$ = this.store.pipe(select('services'));
+    this.store.dispatch(LoadServices());
   }
 
 }

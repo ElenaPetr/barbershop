@@ -1,0 +1,14 @@
+<h2>Our Experts</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                 
+<div fxLayout="row" fxLayoutAlign="space-evenly" *ngIf="(experts$ | async) as experts">
+    <div *ngFor="let expert of experts">
+        <mat-card *ngIf="expert.img" class="expert-info" (click)="toExpertDetail(expert.id)">
+           <div class="img-container"><img [src]="expert.img"></div>
+            <h4>{{expert.name}}</h4>
+            <mat-divider></mat-divider>
+            <p>{{expert.description}}</p>
+        </mat-card>
+    </div>
+</div>

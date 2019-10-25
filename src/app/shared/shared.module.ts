@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatToolbarModule,
@@ -34,10 +34,13 @@ import {
   MatSortModule,
   MatButtonToggleModule,
   MatRippleModule,
-  MatTabsModule
+  MatTabsModule,
+  MatDatepickerModule,
+  MatNativeDateModule 
 } from '@angular/material';
+import { BookingDialogComponent } from './booking-dialog/booking-dialog.component';
 @NgModule({
-  declarations: [],
+  declarations: [BookingDialogComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -72,11 +75,15 @@ import {
     MatButtonToggleModule,
     MatPaginatorModule,
     MatRippleModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
   ],
   exports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     MatAutocompleteModule,
     MatButtonModule,
@@ -108,7 +115,11 @@ import {
     MatButtonToggleModule,
     MatPaginatorModule,
     MatRippleModule,
-    MatTabsModule
-  ]
+    MatTabsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BookingDialogComponent
+  ],
+  entryComponents: [BookingDialogComponent]
 })
 export class SharedModule { }

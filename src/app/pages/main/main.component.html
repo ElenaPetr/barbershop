@@ -11,10 +11,10 @@
     <h2>Our Services</h2>
     <p>The House of Hair Salon &amp; Spa, incididunt ut labore et dolore magna aliqua.</p>
 
-    <div fxLayout="row" fxLayoutAlign="space-between">
+    <div fxLayout="row" fxLayoutAlign="space-evenly" *ngIf="(services$ | async) as services">
         <div *ngFor="let s of services">
             <mat-card class="services-info">
-                <img src="assets/images/{{s.img}}">
+                <img [src]="s.img">
                 <h4>{{s.name}}</h4>
                 <mat-divider></mat-divider>
                 <p>{{s.description}}</p>

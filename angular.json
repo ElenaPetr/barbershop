@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "barbershop"
+  "defaultProject": "barbershop",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

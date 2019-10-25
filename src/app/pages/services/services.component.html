@@ -1,1 +1,10 @@
-<p>services works!</p>
+<div fxLayout="row" fxLayoutAlign="space-evenly" *ngIf="(services$ | async) as services">
+    <div *ngFor="let s of services">
+        <mat-card class="services-info">
+            <img [src]="s.img">
+            <h4>{{s.name}}</h4>
+            <mat-divider></mat-divider>
+            <p>{{s.description}}</p>
+        </mat-card>
+    </div>
+</div>

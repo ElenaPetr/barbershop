@@ -20,6 +20,11 @@
 }
 .services-info {
     width: 200px;
+    height: 250px;
     display: inline-block;
     margin: 10px;
+    background: lightgray;
+    p{
+      padding:16px;
+    }
 }

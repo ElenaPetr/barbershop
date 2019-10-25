@@ -1,0 +1,39 @@
+<section class="mat-typography booking-container" fxLayout="column" fxLayoutAlign="space-between center">
+<h1 class="text-centered">Please fill in the form!</h1>
+<div [formGroup]="bookingForm" fxLayout="column" fxLayoutAlign="space-between center">
+
+        <mat-form-field>
+            <input matInput formControlName="firstName" type="text" placeholder="first name" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="lastName" type="text" placeholder="last name" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="email" type="email" placeholder="email" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput formControlName="telephone" type="text" placeholder="telephone" required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput [matDatepicker]="picker1" [max]="inTwoWeeksDate" [min]="currentDate"
+                placeholder="choose date" formControlName="date" required readonly>
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>choose time</mat-label>
+            <mat-select formControlName="time" required readonly>
+                <mat-option *ngFor="let time of timeSet" [value]="time">
+                    {{time}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+</div>
+
+<button mat-stroked-button (click)="openDialog()">Booking</button>
+</section>

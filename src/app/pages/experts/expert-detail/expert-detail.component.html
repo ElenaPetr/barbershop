@@ -1,0 +1,20 @@
+<div *ngIf="(expert$ | async) as expert">
+    <div fxLayout="row" fxLayoutAlign="space-evenly">
+        <div *ngFor="let work of expert?.works">
+            <mat-card class="expert-details">
+                <div class="img-container"><img [src]="work.img"></div>
+                <h4>{{work.name}}</h4>
+                <mat-divider></mat-divider>
+                <p>{{work.description}}</p>
+            </mat-card>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-evenly" style="margin-top: 30px">
+        <button mat-button routerLink="comments">Comments</button>
+        <button mat-button routerLink="timetable">Contacts</button>
+    </div>
+    <div  class="child-container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

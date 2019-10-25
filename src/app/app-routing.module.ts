@@ -6,10 +6,9 @@ import { MainComponent } from './pages/main/main.component';
 const routes: Routes = [
   { path: '', redirectTo: '/main', pathMatch: 'full'},
   { path: 'main', component: MainComponent},
-  { path: 'about-us', loadChildren: () => import('./pages/about-us/about-us.module').then(mod => mod.AboutUsModule) },
-  { path: 'basket', loadChildren: () => import('./pages/basket/basket.module').then(mod => mod.BasketModule) },
-  { path: 'products', loadChildren: () => import('./pages/products/products.module').then(mod => mod.ProductsModule) },
+  { path: 'experts', loadChildren: () => import('./pages/experts/experts.module').then(mod => mod.ExpertsModule) },
   { path: 'services', loadChildren: () => import('./pages/services/services.module').then(mod => mod.ServicesModule) },
+  { path: 'booking', loadChildren: () => import('./pages/booking/booking.module').then(mod => mod.BookingModule) },
   { path: '**', component: PageNotFoundComponent }
 ];
 

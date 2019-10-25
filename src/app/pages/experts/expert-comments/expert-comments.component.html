@@ -1,0 +1,5 @@
+<div *ngIf="(comments$ | async) as comments">
+    <div *ngFor="let c of comments">
+        <p *ngFor="let com of c.comments">"{{com.text}}" by {{com.user}}</p>
+    </div>
+</div>

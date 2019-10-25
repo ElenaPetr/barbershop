@@ -1,0 +1,15 @@
+<h1 mat-dialog-title class="text-centered">Hi {{data.firstName}}!</h1>
+<mat-divider></mat-divider>
+<div mat-dialog-content>
+    <h2 class="text-centered"> Please confirm booking info:</h2>
+    <p>Your name: <span>{{data.firstName}}</span></p>
+    <p>Your sername: <span>{{data.lastName}}</span></p>
+    <p>Your email: <span>{{data.email}}</span></p>
+    <p>Your telephone: <span>{{data.telephone}}</span></p>
+    <p>Day: <span>{{data.date | date: 'dd/MM/yyyy'}}</span></p>
+    <p>Time: <span>{{data.time}}</span></p>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">No Thanks</button>
+    <button mat-button [mat-dialog-close]="data" color="accent" cdkFocusInitial>Confirm</button>
+</div>

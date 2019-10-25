@@ -1,0 +1,18 @@
+.expert-info{
+    width: 320px;
+    height: 400px;
+    .img-container{
+        width:320px;
+        height: 320px;
+        overflow: hidden;
+    }
+}
+
+.mat-card{
+    cursor: pointer;
+    transition:  all 0.8s ease 0s;
+    &:hover{
+        -webkit-filter: grayscale(.75);
+        filter: grayscale(.75);
+    }
+}
