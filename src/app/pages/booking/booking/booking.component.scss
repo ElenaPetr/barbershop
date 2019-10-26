@@ -5,3 +5,7 @@
 mat-form-field{
   width:500px;
 }
+
+.mat-button:disabled{
+  opacity: 0.5;
+}

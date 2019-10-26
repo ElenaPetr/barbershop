@@ -11,11 +11,11 @@ const routes: Routes = [
     {path: '', redirectTo: 'comments'},
     {
       path: 'comments',
-      component: ExpertCommentsComponent
+      component: ExpertCommentsComponent,  data: { animation: 'comments' }
     },
     {
       path: 'timetable',
-      component: ExpertTimetableComponent
+      component: ExpertTimetableComponent,  data: { animation: 'timetable' }
     }
   ] }
 ];

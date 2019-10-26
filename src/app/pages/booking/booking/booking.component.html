@@ -1,5 +1,5 @@
 <section class="mat-typography booking-container" fxLayout="column" fxLayoutAlign="space-between center">
-<h1 class="text-centered">Please fill in the form!</h1>
+<h1 class="text-centered">Please fill in this form!</h1>
 <div [formGroup]="bookingForm" fxLayout="column" fxLayoutAlign="space-between center">
 
         <mat-form-field>
@@ -35,5 +35,5 @@
         </mat-form-field>
 </div>
 
-<button mat-stroked-button (click)="openDialog()">Booking</button>
+<button mat-button (click)="openDialog()" [disabled]="!bookingForm.valid">Booking</button>
 </section>

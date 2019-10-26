@@ -9,7 +9,7 @@
     <p>Day: <span>{{data.date | date: 'dd/MM/yyyy'}}</span></p>
     <p>Time: <span>{{data.time}}</span></p>
 </div>
-<div mat-dialog-actions>
+<div mat-dialog-actions fxLayoutAlign="space-between center">
     <button mat-button (click)="onNoClick()">No Thanks</button>
     <button mat-button [mat-dialog-close]="data" color="accent" cdkFocusInitial>Confirm</button>
 </div>

@@ -1,4 +1,5 @@
-<div *ngIf="(expert$ | async) as expert">
+<div *ngIf="(expert$ | async) as expert" class="mat-typography">
+<h1 class="text-centered">{{expert.name}}</h1>
     <div fxLayout="row" fxLayoutAlign="space-evenly">
         <div *ngFor="let work of expert?.works">
             <mat-card class="expert-details">
@@ -14,7 +15,8 @@
         <button mat-button routerLink="comments">Comments</button>
         <button mat-button routerLink="timetable">Contacts</button>
     </div>
-    <div  class="child-container">
-        <router-outlet></router-outlet>
+    <div  class="child-container" [@routeAnimation]="getAnimationData(routerOutlet)">
+        <router-outlet #routerOutlet="outlet"></router-outlet>
     </div>
+    <div class="text-centered"><button mat-button routerLink="/experts">Choose another expert</button></div>
 </div>

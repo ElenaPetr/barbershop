@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Expert } from 'src/app/models/expert';
 import { Observable } from 'rxjs';
-import { ActivatedRoute, ParamMap } from '@angular/router';
-import { switchMap, tap } from 'rxjs/operators';
+import { ActivatedRoute, ParamMap, RouterOutlet } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 import { ServicesService } from 'src/app/shared/http-services/services.service';
+import { slideInAnimation } from 'src/app/animation';
 
 @Component({
   selector: 'app-expert-detail',
   templateUrl: './expert-detail.component.html',
-  styleUrls: ['./expert-detail.component.scss']
+  styleUrls: ['./expert-detail.component.scss'],
+  animations: [ slideInAnimation ]
 })
 export class ExpertDetailComponent implements OnInit {
 
@@ -22,6 +24,11 @@ export class ExpertDetailComponent implements OnInit {
       switchMap((params: ParamMap) =>
         this.servicesService.getExpertById(+params.get('id')))
     );
+  }
+
+  getAnimationData(outlet: RouterOutlet) {
+    // tslint:disable-next-line: no-string-literal
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
   }
 
 }
